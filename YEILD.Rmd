@@ -1,0 +1,20 @@
+---
+title: "Yeild"
+author: "Charlie Wilson"
+date: "2/27/2023"
+output: html_document
+---
+
+```{r setup, include=FALSE}ty
+knitr::opts_chunk$set(echo = TRUE)
+source('yield.r')
+
+nsample = 10
+fert = rnorm(mean=5, sd=.5, n=nsample)
+ty = 0
+
+for(i in 1:10) {
+  ty = ty + yield(fert[i],20)
+}
+```
+
